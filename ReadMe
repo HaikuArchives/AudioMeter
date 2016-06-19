@@ -1,0 +1,22 @@
+AudioMeter2
+
+I made a few more changes to this program. It now just does a nice peak program meter, with adjustable range and decay ballistics.
+
+This was done as an exercise; it still has quite a few bugs.
+
+Known bugs:
+
+1. When running with other audio applications, clicking can occur in the output stream, when changing workspaces, or moving windows, etc.  I can't find where exactly this is coming from.  Any help, or info would be muchly appreciated.
+
+2. Replicants.  Enough said.  I haven't figured them out anyway, but when you make a replicant of this AudioMeterView, the original application is run, not this one.  I don't understand.  Maybe time will help.
+
+I figured out why the DAC didn't work - it made itself the first subscriber in the DAC stream, so it was looking at the empty stream, before the other audio applications added their data. Now it makes itself the last app in the DAC stream and the first in the ADC stream.
+
+Unknown bugs:
+
+Currently undocumented.
+
+About the Author / Modifier:
+	- Matt Connolly -
+BeOS, MacOS, Rhapsody programming; Music isn't everything, it's the only thing.
+matt@musiclab.com.au
